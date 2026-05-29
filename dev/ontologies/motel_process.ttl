@@ -1,0 +1,111 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix motel: <https://empa.ch/motel/> .
+
+<https://empa.ch/motel/process/> a owl:Ontology ;
+    rdfs:label "MOTEL Process Ontology Module"@en ;
+    rdfs:comment "Process-focused module containing process hierarchy and process/technology linkage properties."@en ;
+    owl:versionInfo "1.0.0" .
+
+### -----------------------------------------------------------------
+### Top-Level Structural Classes (Process side)
+### -----------------------------------------------------------------
+
+motel:MOTELEntity a owl:Class ;
+    rdfs:label "MOTEL Entity"@en .
+
+motel:Technology a owl:Class ;
+    rdfs:subClassOf motel:MOTELEntity ;
+    rdfs:label "Technology"@en .
+
+motel:Process a owl:Class ;
+    rdfs:subClassOf motel:MOTELEntity ;
+    rdfs:label "Process"@en ;
+    rdfs:comment "The physical, thermodynamic, or chemical action occurring within a technology."@en .
+
+motel:EnergyCarrier a owl:Class ;
+    rdfs:label "Energy Carrier"@en ;
+    rdfs:comment "The substance, fuel, or form of energy going in or coming out of a process."@en .
+
+### -----------------------------------------------------------------
+### Detailed Process Hierarchy (The Operations / Outputs)
+### -----------------------------------------------------------------
+
+motel:CarbonCaptureProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Carbon Capture Process"@en .
+
+motel:CO2TransportProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "CO2 Transport Process"@en .
+
+motel:ElectricityGenerationProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Electricity Generation Process"@en .
+
+motel:ElectricityTransmissionProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Electricity Transmission Process"@en .
+
+motel:HydrogenProductionProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Hydrogen Production Process"@en .
+
+motel:HydrocarbonSynthesisProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Hydrocarbon Synthesis Process"@en .
+
+motel:MethaneSynthesisProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Methane Synthesis Process"@en .
+
+motel:MethanolSynthesisProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Methanol Synthesis Process"@en .
+
+motel:HeatGenerationProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Heat Generation Process"@en .
+
+motel:HeatLossProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Heat Loss Process"@en .
+
+motel:HeatTransportProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Heat Transport Process"@en .
+
+motel:EnergyStorageProcess a owl:Class ;
+    rdfs:subClassOf motel:Process ;
+    rdfs:label "Energy Storage Process"@en .
+
+motel:CombinedHeatPowerGenerationProcess a owl:Class ;
+    rdfs:subClassOf motel:ElectricityGenerationProcess, motel:HeatGenerationProcess ;
+    rdfs:label "Combined Heat and Power Generation Process"@en ;
+    rdfs:comment "A dual-output process that simultaneously yields electricity and useful heat."@en .
+
+### -----------------------------------------------------------------
+### Process/Technology Linkage Properties
+### -----------------------------------------------------------------
+
+motel:hasEnergyCarrierIn a owl:ObjectProperty ;
+    rdfs:label "has energy carrier input"@en ;
+    rdfs:domain [ owl:unionOf (motel:Technology motel:Process) ] ;
+    rdfs:range motel:EnergyCarrier .
+
+motel:hasEnergyCarrierOut a owl:ObjectProperty ;
+    rdfs:label "has energy carrier output"@en ;
+    rdfs:domain [ owl:unionOf (motel:Technology motel:Process) ] ;
+    rdfs:range motel:EnergyCarrier .
+
+motel:executesProcess a owl:ObjectProperty ;
+    rdfs:label "executes process"@en ;
+    rdfs:domain motel:Technology ;
+    rdfs:range motel:Process .
+
+motel:techID a owl:DatatypeProperty ;
+    rdfs:label "technology ID"@en ;
+    rdfs:domain motel:MOTELEntity ;
+    rdfs:range xsd:string .

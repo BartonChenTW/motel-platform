@@ -9,7 +9,6 @@ from typing import Any, Optional, Union
 import pandas as pd
 from pydantic import BaseModel, Field
 
-
 # Controlled-vocabulary stubs (extend as needed)
 class AttributeRef(BaseModel):
     attribute_id: str
@@ -82,7 +81,7 @@ class Tech(BaseModel):
     technology_name: str
     ehubx_tech_id: Optional[str] = None
     ontology_iri: Optional[str] = None
-    process_id: Optional[str] = None
+    process_id: str
 
 
 class Source(BaseModel):
@@ -143,6 +142,23 @@ class RecordCheckReport(BaseModel):
         return pd.DataFrame([item.model_dump() for item in self.items])
 
 
+_DATASET_GROUPS = {
+    "record": "records",
+    "tech": "secondary",
+    "review": "secondary",
+    "source": "secondary",
+    "contributor": "supplementary",
+    "process": "supplementary",
+    "attribute": "predefined",
+    "carrier": "predefined",
+    "geographic_scope": "predefined",
+    "temporal_scope": "predefined",
+    "capacity_scope": "predefined",
+    "system_boundary": "predefined",
+    "uncertainty": "predefined",
+}
+
+
 _record_counter = 0
 
 
@@ -199,6 +215,20 @@ def _read_csv_rows(path: Path) -> list[dict[str, str]]:
         return [dict(row) for row in reader]
 
 
+def _resolve_dataset_csv_path(dataset_dir: Path, entity: str) -> Path:
+    """Prefer grouped dataset folders, fallback to flat legacy layout."""
+    group = _DATASET_GROUPS.get(entity, "other")
+    preferred = dataset_dir / group / f"{entity}.csv"
+    if preferred.exists():
+        return preferred
+
+    legacy = dataset_dir / f"{entity}.csv"
+    if legacy.exists():
+        return legacy
+
+    return preferred
+
+
 def _non_empty_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     out: list[dict[str, str]] = []
     for row in rows:
@@ -211,20 +241,24 @@ def load_data_store(dataset_dir: Path) -> MotelDataStore:
     """Load existing secondary/supplementary/control-vocabulary CSVs into one object."""
     store = MotelDataStore()
 
-    tech_rows = _non_empty_rows(_read_csv_rows(dataset_dir / "tech.csv"))
+    tech_rows = _non_empty_rows(_read_csv_rows(_resolve_dataset_csv_path(dataset_dir, "tech")))
     for row in tech_rows:
         tech_id = (row.get("tech_id") or "").strip()
         if not tech_id:
             continue
+        process_id = (row.get("process_id") or "").strip()
+        if not process_id:
+            # Keep loading legacy/partial rows; they will be flagged in checks.
+            process_id = "MISSING_PROCESS_LINK"
         store.tech[tech_id] = Tech(
             tech_id=tech_id,
             technology_name=(row.get("technology_name") or tech_id).strip(),
             ehubx_tech_id=(row.get("ehubx_tech_id") or None),
             ontology_iri=(row.get("ontology_iri") or None),
-            process_id=(row.get("process_id") or None),
+            process_id=process_id,
         )
 
-    source_rows = _non_empty_rows(_read_csv_rows(dataset_dir / "source.csv"))
+    source_rows = _non_empty_rows(_read_csv_rows(_resolve_dataset_csv_path(dataset_dir, "source")))
     for row in source_rows:
         source_id = (row.get("source_id") or "").strip()
         if not source_id:
@@ -239,7 +273,9 @@ def load_data_store(dataset_dir: Path) -> MotelDataStore:
             assessment_method=(row.get("assessment_method") or None),
         )
 
-    contributor_rows = _non_empty_rows(_read_csv_rows(dataset_dir / "contributor.csv"))
+    contributor_rows = _non_empty_rows(
+        _read_csv_rows(_resolve_dataset_csv_path(dataset_dir, "contributor"))
+    )
     for row in contributor_rows:
         contributor_id = (row.get("contributor_id") or "").strip()
         if not contributor_id:
@@ -251,7 +287,7 @@ def load_data_store(dataset_dir: Path) -> MotelDataStore:
             email=(row.get("email") or None),
         )
 
-    process_rows = _non_empty_rows(_read_csv_rows(dataset_dir / "process.csv"))
+    process_rows = _non_empty_rows(_read_csv_rows(_resolve_dataset_csv_path(dataset_dir, "process")))
     for row in process_rows:
         process_id = (row.get("process_id") or "").strip()
         if not process_id:
@@ -265,7 +301,8 @@ def load_data_store(dataset_dir: Path) -> MotelDataStore:
         )
 
     def _load_id_set(file_name: str, key: str) -> set[str]:
-        rows = _non_empty_rows(_read_csv_rows(dataset_dir / file_name))
+        entity = file_name.replace(".csv", "")
+        rows = _non_empty_rows(_read_csv_rows(_resolve_dataset_csv_path(dataset_dir, entity)))
         return {(r.get(key) or "").strip() for r in rows if (r.get(key) or "").strip()}
 
     store.geographic_scope = _load_id_set("geographic_scope.csv", "geographic_scope")
@@ -276,12 +313,38 @@ def load_data_store(dataset_dir: Path) -> MotelDataStore:
     return store
 
 
+def inspect_refuel_source_file(excel_path: Union[str, Path]) -> tuple[list[str], str, pd.DataFrame]:
+    """Inspect a reFuel workbook and return sheet metadata with a preview DataFrame."""
+    path = Path(excel_path)
+    xl = pd.ExcelFile(path)
+    sheet_names = xl.sheet_names
+    if not sheet_names:
+        raise ValueError(f"No sheets found in workbook: {path}")
+
+    preview_sheet = sheet_names[0]
+    source_df_raw = pd.read_excel(path, sheet_name=preview_sheet)
+    return sheet_names, preview_sheet, source_df_raw
+
+
 def register_tech(store: MotelDataStore, tech: Tech) -> None:
+    if not tech.process_id:
+        raise ValueError(
+            f"Tech '{tech.tech_id}' must include a non-empty process_id."
+        )
+    if tech.process_id not in store.process:
+        raise ValueError(
+            f"Tech '{tech.tech_id}' links to process_id '{tech.process_id}', "
+            "but that process is not registered in supplementary dataset 'process'."
+        )
     store.tech[tech.tech_id] = tech
 
 
 def register_source(store: MotelDataStore, source: Source) -> None:
     store.source[source.source_id] = source
+
+
+def register_process(store: MotelDataStore, process: Process) -> None:
+    store.process[process.process_id] = process
 
 
 def register_scope_value(store: MotelDataStore, scope_type: str, value: str) -> None:
@@ -326,7 +389,17 @@ def check_record_dependencies(
     capacity_scope = str(draft.get("capacity_scope") or "")
     system_boundary = str(draft.get("system_boundary") or "")
 
-    _add("tech_id", "tech", tech_id in store.tech, tech_id)
+    tech_exists = tech_id in store.tech
+    _add("tech_id", "tech", tech_exists, tech_id)
+
+    if tech_exists:
+        linked_process_id = store.tech[tech_id].process_id
+        _add(
+            "tech.process_id",
+            "process",
+            linked_process_id in store.process,
+            linked_process_id,
+        )
     _add("source_id", "source", source_id in store.source, source_id)
     _add(
         "geographic_scope",
@@ -394,9 +467,11 @@ def create_record_if_ready(
 def export_data_store_csv(store: MotelDataStore, dataset_dir: Path) -> list[Path]:
     """Persist current in-memory secondary/supplementary/scope datasets to CSV files."""
     dataset_dir.mkdir(parents=True, exist_ok=True)
+    for group in ["records", "secondary", "supplementary", "predefined"]:
+        (dataset_dir / group).mkdir(parents=True, exist_ok=True)
     written: list[Path] = []
 
-    tech_path = dataset_dir / "tech.csv"
+    tech_path = dataset_dir / "secondary" / "tech.csv"
     with tech_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["tech_id", "technology_name", "ehubx_tech_id", "ontology_iri", "process_id"])
@@ -410,7 +485,7 @@ def export_data_store_csv(store: MotelDataStore, dataset_dir: Path) -> list[Path
             ])
     written.append(tech_path)
 
-    source_path = dataset_dir / "source.csv"
+    source_path = dataset_dir / "secondary" / "source.csv"
     with source_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow([
@@ -438,7 +513,7 @@ def export_data_store_csv(store: MotelDataStore, dataset_dir: Path) -> list[Path
             ])
     written.append(source_path)
 
-    contributor_path = dataset_dir / "contributor.csv"
+    contributor_path = dataset_dir / "supplementary" / "contributor.csv"
     with contributor_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["contributor_id", "name", "affiliation", "email"])
@@ -446,7 +521,7 @@ def export_data_store_csv(store: MotelDataStore, dataset_dir: Path) -> list[Path
             writer.writerow([item.contributor_id, item.name, item.affiliation or "", item.email or ""])
     written.append(contributor_path)
 
-    process_path = dataset_dir / "process.csv"
+    process_path = dataset_dir / "supplementary" / "process.csv"
     with process_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow([
@@ -472,7 +547,7 @@ def export_data_store_csv(store: MotelDataStore, dataset_dir: Path) -> list[Path
         ("capacity_scope", store.capacity_scope),
         ("system_boundary", store.system_boundary),
     ]:
-        path = dataset_dir / f"{name}.csv"
+        path = dataset_dir / "predefined" / f"{name}.csv"
         with path.open("w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
             writer.writerow([name])
@@ -674,12 +749,92 @@ def schema_headers(schema_path: Path) -> dict[str, list[str]]:
 def export_dataset_csv_templates(schema_path: Path, output_dir: Path) -> list[Path]:
     output_dir.mkdir(parents=True, exist_ok=True)
     headers_map = schema_headers(schema_path)
+    entity_types = parse_schema_entities(schema_path)
 
     paths: list[Path] = []
     for entity, headers in headers_map.items():
-        path = output_dir / f"{entity}.csv"
+        group = entity_types.get(entity, _DATASET_GROUPS.get(entity, "other"))
+        group_dir = output_dir / group
+        group_dir.mkdir(parents=True, exist_ok=True)
+        path = group_dir / f"{entity}.csv"
         with path.open("w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
             writer.writerow(headers)
         paths.append(path)
     return paths
+
+
+def clear_dataset_data(dataset_dir: Path, schema_path: Optional[Path] = None) -> list[Path]:
+    """Clear all dataset CSV contents while preserving dataset structure.
+
+    If ``schema_path`` is provided, template files are re-generated from schema,
+    which guarantees expected files and headers. Otherwise, existing CSV files are
+    truncated to header-only rows.
+    """
+    dataset_dir.mkdir(parents=True, exist_ok=True)
+
+    if schema_path is not None:
+        return export_dataset_csv_templates(schema_path, dataset_dir)
+
+    csv_paths = sorted(dataset_dir.rglob("*.csv"))
+    cleared: list[Path] = []
+    for path in csv_paths:
+        header = ""
+        if path.exists():
+            with path.open("r", encoding="utf-8") as f:
+                header = f.readline().strip()
+
+        with path.open("w", newline="", encoding="utf-8") as f:
+            if header:
+                f.write(header + "\n")
+        cleared.append(path)
+
+    return cleared
+
+
+class Motel_Platform:
+    """Namespace wrapper for MOTEL models and workflow helpers."""
+
+    # Models
+    AttributeRef = AttributeRef
+    GeographicScope = GeographicScope
+    TemporalScope = TemporalScope
+    CapacityScope = CapacityScope
+    SystemBoundary = SystemBoundary
+    Version = Version
+    Scope = Scope
+    ValueItem = ValueItem
+    Record = Record
+    Tech = Tech
+    Source = Source
+    Contributor = Contributor
+    Process = Process
+    MotelDataStore = MotelDataStore
+    RecordCheckItem = RecordCheckItem
+    RecordCheckReport = RecordCheckReport
+
+    # Utilities and workflow
+    next_record_id = staticmethod(next_record_id)
+    build_secondary_index = staticmethod(build_secondary_index)
+    validate_secondary_references = staticmethod(validate_secondary_references)
+    parse_schema_entities = staticmethod(parse_schema_entities)
+    schema_headers = staticmethod(schema_headers)
+    records_to_dataframe = staticmethod(records_to_dataframe)
+    inspect_refuel_source_file = staticmethod(inspect_refuel_source_file)
+    clear_dataset_data = staticmethod(clear_dataset_data)
+
+    # Data store operations
+    load_data_store = staticmethod(load_data_store)
+    register_process = staticmethod(register_process)
+    register_tech = staticmethod(register_tech)
+    register_source = staticmethod(register_source)
+    register_scope_value = staticmethod(register_scope_value)
+    check_record_dependencies = staticmethod(check_record_dependencies)
+    create_record_if_ready = staticmethod(create_record_if_ready)
+
+    # Record creation/export
+    create_record = staticmethod(create_record)
+    export_records_jsonl = staticmethod(export_records_jsonl)
+    export_records_csv = staticmethod(export_records_csv)
+    export_data_store_csv = staticmethod(export_data_store_csv)
+    export_dataset_csv_templates = staticmethod(export_dataset_csv_templates)
