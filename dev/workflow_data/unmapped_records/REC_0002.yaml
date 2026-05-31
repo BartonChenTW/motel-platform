@@ -1,0 +1,41 @@
+{
+  "record_id": "REC_0002",
+  "temp_id": "TMP_0002",
+  "description": "Lithium-ion battery energy storage used for household peak shaving and daily charging cycles.",
+  "status": "unmapped",
+  "scope": {
+    "geographic_scope": "GEO_CH",
+    "temporal_scope": "TIME_2026",
+    "capacity_scope": "CAP_RESIDENTIAL",
+    "system_boundary": "COND_GRID_CONNECTED"
+  },
+  "sources": [
+    {
+      "source_id": "SRC_SWISSGRID_2025",
+      "relevance": "primary"
+    }
+  ],
+  "assumptions": [],
+  "values": [
+    {
+      "attribute_id": "ATTR_EFFICIENCY",
+      "value": 0.91,
+      "value_type": "numeric",
+      "unit": "fraction",
+      "uncertainty": null,
+      "note": null
+    }
+  ],
+  "mapping": {
+    "mapped_tech_id": null,
+    "mapped_process_id": null,
+    "confidence": null,
+    "method": null,
+    "mapping_notes": null,
+    "ontology_iri": null,
+    "approved_by": null,
+    "approved_at": null
+  },
+  "created_at": "2026-05-31T20:48:28.006589",
+  "updated_at": "2026-05-31T20:48:28.006683"
+}

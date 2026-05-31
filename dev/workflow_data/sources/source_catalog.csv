@@ -1,0 +1,4 @@
+source_id,source_description,source_type,link
+SRC_USER_001,User submission,webform,
+SRC_NREL_ATB_2023,NREL ATB 2023,report,https://atb.nrel.gov/
+SRC_SWISSGRID_2025,Swissgrid technology assumptions,report,https://www.swissgrid.ch/

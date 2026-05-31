@@ -36,7 +36,7 @@ tech:
     _type: secondary
     tech_id: Unique identifier for the technology
     technology_name: Common name of the technology
-    ehubx_tech_id: Corresponding ehubX technology ID in SwissX system
+    # ehubx_tech_id: Corresponding ehubX technology ID in SwissX system
     ontology_iri: Corresponding Ontology IRI identifier, if available
     process_id: Corresponding process identifier, if available
 
