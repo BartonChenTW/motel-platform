@@ -4,8 +4,8 @@ from pathlib import Path
 
 import streamlit as st
 
-from dev.workflow_v2.pipeline import WorkflowEngine
-from dev.workflow_v2.settings import WorkflowPaths, detect_repo_root
+from bakcup.dev.workflow_v2.pipeline import WorkflowEngine
+from bakcup.dev.workflow_v2.settings import WorkflowPaths, detect_repo_root
 
 
 repo_root = detect_repo_root(Path(__file__).resolve())

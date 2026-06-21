@@ -4,8 +4,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from dev.workflow_v2.pipeline import WorkflowEngine
-from dev.workflow_v2.settings import WorkflowPaths
+from bakcup.dev.workflow_v2.pipeline import WorkflowEngine
+from bakcup.dev.workflow_v2.settings import WorkflowPaths
 
 
 class WorkflowV2Test(unittest.TestCase):
