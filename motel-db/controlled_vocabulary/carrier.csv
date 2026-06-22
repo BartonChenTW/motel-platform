@@ -1,1 +1,4 @@
-carrier_id,carrier_name,carrier_description,carrier_type,carrier_category,carrier_reference,note
+carrier_id,carrier_name,carrier_description,carrier_type,carrier_category,carrier_reference,noteCAR_00001,NH3,,,
+CAR_00002,El13,,,
+CAR_00003,CH4,,,
+CAR_00003,NH3,,,
