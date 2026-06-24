@@ -6,8 +6,12 @@
 
 import math
 import re
+from copy import deepcopy
 from collections import defaultdict
+from pathlib import Path
+
 import pandas as pd
+import yaml
 
 ## --- supportive functions
 
@@ -332,3 +336,41 @@ def add_balancing_to_record(ue: dict, row: pd.Series) -> dict:
     )
 
     return ue
+
+
+def publish_unmapped_entities(entity_groups, destination):
+    """
+    Publish ingested entities to the database staging area.
+
+    A fresh copy is created so the notebook's in-memory records are not mutated.
+    Every published entity starts in the ``to_be_mapped`` lifecycle state.
+
+    Args:
+        entity_groups (iterable[iterable[dict]]): Groups of ingested entities.
+        destination (str | Path): Combined YAML file in motel-db/unmapped_entity.
+
+    Returns:
+        list[dict]: The combined records written to ``destination``.
+    """
+    published = []
+    for group in entity_groups:
+        for entity in group:
+            record = deepcopy(entity)
+            record["mapping_status"] = "to_be_mapped"
+            record.pop("linked_entity_id", None)
+            record.pop("date_mapped", None)
+            published.append(record)
+
+    destination = Path(destination)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    temporary = destination.with_suffix(destination.suffix + ".tmp")
+    with open(temporary, "w", encoding="utf-8") as f:
+        yaml.safe_dump(
+            published,
+            f,
+            allow_unicode=True,
+            sort_keys=False,
+            default_flow_style=False,
+        )
+    temporary.replace(destination)
+    return published
