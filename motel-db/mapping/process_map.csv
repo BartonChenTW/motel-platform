@@ -1,3 +1,40 @@
 process_name,process_id,status
 CCGT,PROC_00001,created
 OCGT,PROC_00002,created
+CHP plant,PROC_00003,created
+SOFC,PROC_00004,created
+Geothermal power plant,PROC_00005,created
+Pumped hydro (pump mode),PROC_00006,created
+Pumped hydro (turbine mode),PROC_00007,created
+Run-of-river plant,PROC_00008,created
+Reservoir plant,PROC_00009,created
+Incineration plant,PROC_00010,created
+Ground-mounted PV (alpine),PROC_00011,created
+Rooftop PV,PROC_00012,created
+Pressurised water reactor,PROC_00013,created
+Onshore wind turbine,PROC_00014,created
+Biomass CHP plant,PROC_00015,created
+Gas-fired boiler,PROC_00016,created
+Resistance heater,PROC_00017,created
+Air conditioning unit,PROC_00018,created
+Hydrogen burner,PROC_00019,created
+Air-source heat pump,PROC_00020,created
+Industrial heat pump,PROC_00021,created
+Oil-fired boiler,PROC_00022,created
+Biomass furnace,PROC_00023,created
+Haber–Bosch reactor,PROC_00024,created
+Anaerobic digester,PROC_00025,created
+Sabatier reactor,PROC_00026,created
+HEFA reactor,PROC_00027,created
+Methanol synthesis reactor,PROC_00028,created
+RWGS reactor,PROC_00029,created
+Alkaline electrolyser,PROC_00030,created
+FT reactor,PROC_00031,created
+Fluidised bed gasifier,PROC_00032,created
+MtO + oligomerisation reactor,PROC_00033,created
+SOEC co-electrolyser,PROC_00034,created
+Methane pyrolysis reactor,PROC_00035,created
+Amine absorber,PROC_00036,created
+Pyrolysis reactor,PROC_00037,created
+DAC (sorbent-based),PROC_00038,created
+Pressure swing adsorption,PROC_00039,created
