@@ -178,8 +178,8 @@ def get_attr_note(row: pd.Series) -> str:
 
     Args:
         row: A pandas Series representing a row from the ConvTech DataFrame.
-        attr_name: The name of the attribute to extract the note for.    
-        
+        attr_name: The name of the attribute to extract the note for.
+
     Returns:
         The note string for the attribute, or None if not found.
     """
@@ -201,6 +201,7 @@ def add_attributes_to_record(ue: dict, row: pd.Series, df_attr: pd.DataFrame) ->
         The same unmapped_record dict with 'attributes' populated.
     """
     attributes = []
+    currency = clean(row.get('currency'))
 
     for attr in df_attr.index:
         if attr not in row.keys():
@@ -209,12 +210,18 @@ def add_attributes_to_record(ue: dict, row: pd.Series, df_attr: pd.DataFrame) ->
         if is_nan(row[attr]):
             continue  # Skip if the attribute value is NaN
 
+        attr_row = df_attr.loc[attr]
+        notes = get_attr_note(attr_row)
+        unit_spec = str(attr_row.get('Unit / Format', ''))
+        if currency and 'Currency' in unit_spec:
+            notes += f" | currency: {currency}"
+
         attr = {
             'attribute_name': attr,
             'value': clean(row[attr]),
             'uncertainty_notes': None,
             'time_index': clean(row.get('tech_year', None)),
-            'notes': get_attr_note(df_attr.loc[attr])
+            'notes': notes
         }
         attributes.append(attr)
 
