@@ -1,6 +1,6 @@
 Technology: # Defines asset-specific physical infrastructure, operational limits, costs, and hardware profiles.
     tech_id: "[Required; String] Unique alphanumerical hardware key acting as the primary key for physical equipment assets (e.g., tech_00041)."
-    technology_name: "[Required; String] Standardised machine-readable asset identifier using snake_case (e.g., El_Electrolysis_Alkaline)."
+    technology_name: "[Required; String] Standardised capitalised human-readable asset name without underscores (e.g., El Electrolysis Alkaline)."
     technology_description: "[String] Engineering narrative defining the technical performance bounds, scope limits, or mechanical configurations of the hardware."
     technology_variant: "[String] The hyper-specific architectural subcategory or cell structure of the asset (e.g., Anion Exchange Membrane)."
     main_process: "[String] Foreign key (process name) mapping this physical asset back to the core operational network service node it serves."
