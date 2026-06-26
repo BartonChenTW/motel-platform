@@ -1,5 +1,0 @@
-tech_id,technology_name,ontology_iri,process_id
-T_C_Conv_Solar_PV,Solar photovoltaic system,motel:T_C_Conv_Solar_PV,P_Electricity_Generation
-T_C_Conv_Wind_On,Onshore wind turbine,motel:T_C_Conv_Wind_On,P_Electricity_Generation
-T_S_Stor_Battery,Battery energy storage,motel:T_S_Stor_Battery,P_Charging
-T_C_Conv_Hydro_Pump,Pumped hydro storage,motel:T_C_Conv_Hydro_Pump,P_Hydro_Pumping

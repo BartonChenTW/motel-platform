@@ -1,3 +1,0 @@
-# Workflow
-
-Workflow documentation placeholder.

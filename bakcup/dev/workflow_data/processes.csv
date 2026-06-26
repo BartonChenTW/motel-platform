@@ -1,4 +1,0 @@
-process_id,process_name,ontology_iri
-P_Electricity_Generation,Electricity generation process,motel:P_Electricity_Generation
-P_Hydro_Pumping,Hydro pumping process,motel:P_Hydro_Pumping
-P_Charging,Battery charging process,motel:P_Charging

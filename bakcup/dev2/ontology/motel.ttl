@@ -1,3 +1,0 @@
-@prefix motel: <http://example.org/motel#> .
-
-motel:Root a motel:Ontology .
