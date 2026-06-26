@@ -15,6 +15,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.005743
@@ -64,18 +76,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: direct air capture system | lca_location:
       RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: BioWet_Digestion_CH4
   technology:
     technology_description: anaerobic digestion plant construction, agricultural
@@ -93,6 +93,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.000361
@@ -142,18 +154,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: anaerobic digestion plant, agricultural
       | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: C12_Tank_C12
   technology:
     technology_description: liquid storage tank production, chemicals, organics
@@ -171,6 +171,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.043964
@@ -228,18 +240,6 @@
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: liquid storage tank, chemicals, organics
       | lca_location: CH | notes: 4000m3 of storage capacity, 44.1 MJ/kg, 750 kg/m3
       density -> 36750000 kWh of storage capacity rough estimation'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: C8_Tank_C8
   technology:
     technology_description: liquid storage tank production, chemicals, organics
@@ -257,6 +257,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.047221
@@ -314,18 +326,6 @@
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: liquid storage tank, chemicals, organics
       | lca_location: CH | notes: 4000m3 of storage capacity, 44.4 MJ/kg, 700 kg/m3
       density -> 34500000 kWh of storage capacity rough estimation'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CH4_Boiler_ThBdg
   technology:
     technology_description: market for gas boiler
@@ -343,6 +343,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 45.14423
@@ -384,18 +396,6 @@
     uncertainty_notes: 'climate scenario: ssp2_pkbudg1000'
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: gas boiler | lca_location: GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CH4_Boiler_ThInd
   technology:
     technology_description: market for gas boiler
@@ -413,6 +413,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 45.14423
@@ -454,18 +466,6 @@
     uncertainty_notes: 'climate scenario: ssp2_pkbudg1000'
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: gas boiler | lca_location: GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CH4_CCGT_El
   technology:
     technology_description: market for gas power plant, combined cycle, 400MW electrical
@@ -483,6 +483,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 150.3133
@@ -532,18 +544,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: gas power plant, combined cycle, 400MW
       electrical | lca_location: GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CH4_CHP_ElTh
   technology:
     technology_description: heat and power co-generation unit construction, 160kW
@@ -563,6 +563,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 330.1446
@@ -612,18 +624,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: heat and power co-generation unit,
       160kW electrical, common components for heat+electricity | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CH4_FuelCell_El
   technology:
     technology_description: fuel cell production, solid oxide, 125kW electrical, future
@@ -641,6 +641,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 916.4007
@@ -690,18 +702,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: fuel cell, solid oxide, 125kW electrical,
       future | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CH4_FuelCell_ElBdg
   technology:
     technology_description: fuel cell production, solid oxide, 125kW electrical, future
@@ -719,6 +719,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 916.4007
@@ -768,18 +780,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: fuel cell, solid oxide, 125kW electrical,
       future | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CH4_GridStorage_CH4
   technology:
     technology_description: pipeline construction, natural gas, high pressure distribution
@@ -798,6 +798,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 85723.57
@@ -847,18 +859,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/km | ref_product: pipeline, natural gas, high pressure
       distribution network | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CH4_OCGT_El
   technology:
     technology_description: micro gas turbine production, 100kW electrical
@@ -876,6 +876,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 147.7244
@@ -925,18 +937,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: micro gas turbine, 100kW electrical
       | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CH4_Tank_CH4
   technology:
     technology_description: fuel tank assembly, compressed natural gas, 200 bar
@@ -954,6 +954,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.728192
@@ -1003,18 +1015,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: fuel tank, compressed natural gas,
       200 bar | lca_location: RER | notes: for a 154.66 kg tank, of 1074kWh fuel capacity'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CO2Flue_AmineScrub_CO2
   technology:
     technology_description: market for monoethanolamine
@@ -1032,6 +1032,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.004459
@@ -1073,18 +1085,6 @@
     uncertainty_notes: 'climate scenario: ssp2_pkbudg1000'
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: monoethanolamine | lca_location: GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: CO2Flue_PSA_CO2
   technology:
     technology_description: potassium carbonate production, from potassium hydroxide
@@ -1102,6 +1102,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.001517
@@ -1151,18 +1163,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: potassium carbonate | lca_location:
       GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: ElBdg_Battery_ElBdg
   technology:
     technology_description: market for battery capacity, Li-ion, LFP
@@ -1180,6 +1180,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 103.0537
@@ -1229,18 +1241,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: electricity storage capacity | lca_location:
       GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: El_AirCon_ThSc
   technology:
     technology_description: heat pump production, diffusion absorption, 4kW, future
@@ -1258,6 +1258,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 292.1159
@@ -1307,18 +1319,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: heat pump, diffusion absorption, 4kW,
       future | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: El_Battery_El
   technology:
     technology_description: market for battery capacity (MIX scenario)
@@ -1336,6 +1336,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 91.90198
@@ -1385,18 +1397,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: electricity storage capacity | lca_location:
       GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: El_CoElectrolysis_Syngas
   technology:
     technology_description: electrolyzer production, 1MWe, SOEC, Balance of Plant
@@ -1415,6 +1415,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 285.9869
@@ -1464,18 +1476,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: electrolyzer, 1MWe, SOEC, Balance
       of Plant + 2 * Stack | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: El_Electrolysis_H2
   technology:
     technology_description: electrolyzer production, 1MWe, AEC, Balance of Plant +
@@ -1494,6 +1494,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 656.3468
@@ -1543,18 +1555,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: electrolyzer, 1MWe, AEC, Balance of
       Plant + 2 * Stack | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: El_HeatPump_ThBdg
   technology:
     technology_description: heat pump production, 30kW
@@ -1572,6 +1572,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 159.911
@@ -1613,18 +1625,6 @@
     uncertainty_notes: 'climate scenario: ssp2_pkbudg1000'
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: heat pump, 30kW | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: El_HeatPump_ThInd
   technology:
     technology_description: heat pump production, 30kW
@@ -1642,6 +1642,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 159.911
@@ -1683,18 +1695,6 @@
     uncertainty_notes: 'climate scenario: ssp2_pkbudg1000'
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: heat pump, 30kW | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: El_Heater_ThBdg
   technology:
     technology_description: auxiliary heating unit production, electric, 5kW
@@ -1712,6 +1712,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 1.286441
@@ -1761,18 +1773,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: auxiliary heating unit, electric,
       5kW | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: El_Heater_ThInd
   technology:
     technology_description: auxiliary heating unit production, electric, 5kW
@@ -1790,6 +1790,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 1.286441
@@ -1839,18 +1851,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: auxiliary heating unit, electric,
       5kW | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: El_PumpedHydro_Pump
   technology:
     technology_description: hydropower plant construction, reservoir, alpine region
@@ -1868,6 +1868,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 1508.637
@@ -1917,18 +1929,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: hydropower plant, reservoir, alpine
       region | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Geothermal_CHP_ElTh
   technology:
     technology_description: geothermal power plant construction
@@ -1946,6 +1946,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 12216.03
@@ -1995,18 +2007,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: geothermal power plant, 5.5MWel |
       lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: H2_Boiler_ThInd
   technology:
     technology_description: market for gas boiler
@@ -2024,6 +2024,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 45.14423
@@ -2065,18 +2077,6 @@
     uncertainty_notes: 'climate scenario: ssp2_pkbudg1000'
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: gas boiler | lca_location: GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: H2_CCGT_El
   technology:
     technology_description: auto-thermal reforming-hydrogen GT power plant, 400MWe
@@ -2094,6 +2094,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 158.3285
@@ -2143,18 +2155,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: auto-thermal reforming-hydrogen GT
       power plant, 400MWe | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: H2_CO2Hydro_MeOH
   technology:
     technology_description: methanol production facility, construction
@@ -2172,6 +2172,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.034779
@@ -2221,18 +2233,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: methanol production facility, construction
       | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: H2_FuelCell_El
   technology:
     technology_description: fuel cell production, solid oxide, 125kW electrical, future
@@ -2250,6 +2250,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 916.4007
@@ -2299,18 +2311,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: fuel cell, solid oxide, 125kW electrical,
       future | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: H2_FuelCell_ElBdg
   technology:
     technology_description: fuel cell production, solid oxide, 125kW electrical, future
@@ -2328,6 +2328,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 916.4007
@@ -2377,18 +2389,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: fuel cell, solid oxide, 125kW electrical,
       future | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: H2_HaberBosch_NH3
   technology:
     technology_description: ammonia synthesis catalyst production
@@ -2406,6 +2406,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.000127
@@ -2455,18 +2467,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: ammonia synthesis catalyst | lca_location:
       GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: H2_OCGT_El
   technology:
     technology_description: micro gas turbine production, 100kW electrical
@@ -2484,6 +2484,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 147.7244
@@ -2533,18 +2545,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: micro gas turbine, 100kW electrical
       | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: H2_RWGS_CO
   technology:
     technology_description: RWGS tank construction
@@ -2562,6 +2562,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.006293
@@ -2611,18 +2623,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: RWGS tank construction | lca_location:
       GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: H2_Sabatier_CH4
   technology:
     technology_description: sabatier reaction methanation unit construction
@@ -2640,6 +2640,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.009781
@@ -2689,18 +2701,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: sabatier reaction methanation unit
       | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: H2_Tank_H2
   technology:
     technology_description: fuel tank assembly, compressed hydrogen gas, 700bar
@@ -2718,6 +2718,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 20.81867
@@ -2767,18 +2779,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: fuel tank, compressed hydrogen gas,
       700bar | lca_location: RER | notes: for a 117.39 kg tank, of 200 kWh fuel capacity'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Hydro_PumpedReservoir_Hydro
   technology:
     technology_description: hydropower plant construction, reservoir
@@ -2796,6 +2796,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0
@@ -2853,18 +2865,6 @@
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: hydropower plant, reservoir | lca_location:
       CH | notes: Already included in the electricity generation dataset, so not added
       here to avoid double counting.'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Hydro_PumpedTurbine_El
   technology:
     technology_description: hydropower plant construction, reservoir, alpine region
@@ -2882,6 +2882,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 1508.637
@@ -2931,18 +2943,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: hydropower plant, reservoir, alpine
       region | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Hydro_Reservoir_El
   technology:
     technology_description: hydropower plant construction, reservoir, alpine region
@@ -2960,6 +2960,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 1508.637
@@ -3009,18 +3021,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: hydropower plant, reservoir, alpine
       region | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Hydro_Reservoir_Hydro
   technology:
     technology_description: hydropower plant construction, reservoir
@@ -3038,6 +3038,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0
@@ -3095,18 +3107,6 @@
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: hydropower plant, reservoir | lca_location:
       CH | notes: Already included in the electricity generation dataset, so not added
       here to avoid double counting.'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Hydro_RunOfRiver_El
   technology:
     technology_description: hydropower plant construction, run-of-river
@@ -3124,6 +3124,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 1335.991
@@ -3173,18 +3185,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: hydropower plant, run-of-river | lca_location:
       CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: MSW_Gasification_H2
   technology:
     technology_description: synthetic gas factory construction
@@ -3202,6 +3202,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.000222
@@ -3251,18 +3263,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: synthetic gas factory | lca_location:
       CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: MSW_Gasification_Syngas
   technology:
     technology_description: synthetic gas factory construction
@@ -3280,6 +3280,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.000222
@@ -3329,18 +3341,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: synthetic gas factory | lca_location:
       CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: MSW_Incineration_El
   technology:
     technology_description: municipal waste incineration facility construction
@@ -3358,6 +3358,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 1636.039
@@ -3407,18 +3419,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: municipal waste incineration facility
       | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: NH3_CCGT_El
   technology:
     technology_description: market for gas power plant, combined cycle, 400MW electrical
@@ -3436,6 +3436,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 150.3133
@@ -3485,18 +3497,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: gas power plant, combined cycle, 400MW
       electrical | lca_location: GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: NH3_OCGT_El
   technology:
     technology_description: micro gas turbine production, 100kW electrical
@@ -3514,6 +3514,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 147.7244
@@ -3563,18 +3575,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: micro gas turbine, 100kW electrical
       | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: NH3_Tank_NH3
   technology:
     technology_description: liquid storage tank production, chemicals, organics
@@ -3592,6 +3592,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.131893
@@ -3649,18 +3661,6 @@
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: liquid storage tank, chemicals, organics
       | lca_location: CH | notes: 4000m3 of storage capacity, 18.6 MJ/kg, 600 kg/m3
       density -> 12400000 kWh of storage capacity rough estimation'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Oil_Boiler_ThBdg
   technology:
     technology_description: market for gas boiler
@@ -3678,6 +3678,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 45.14423
@@ -3719,18 +3731,6 @@
     uncertainty_notes: 'climate scenario: ssp2_pkbudg1000'
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: gas boiler | lca_location: GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Oil_Boiler_ThInd
   technology:
     technology_description: market for gas boiler
@@ -3748,6 +3748,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 45.14423
@@ -3789,18 +3801,6 @@
     uncertainty_notes: 'climate scenario: ssp2_pkbudg1000'
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: gas boiler | lca_location: GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Solar_PVAlpine_El
   technology:
     technology_description: photovoltaic plant construction, 570kWp, multi-Si, on
@@ -3819,6 +3819,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 1335.138
@@ -3868,18 +3880,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: photovoltaic plant, 570kWp, multi-Si,
       on open ground | lca_location: GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Solar_PVRooftop_El
   technology:
     technology_description: photovoltaic flat-roof installation, 3kWp, multi-Si, on
@@ -3898,6 +3898,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 1273.599
@@ -3947,18 +3959,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: photovoltaic flat-roof installation,
       3kWp, multi-Si, on roof | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Syngas_COHydro_CH4
   technology:
     technology_description: sabatier reaction methanation unit construction
@@ -3976,6 +3976,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.009781
@@ -4025,18 +4037,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: sabatier reaction methanation unit
       | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Syngas_COHydro_MeOH
   technology:
     technology_description: methanol production facility, construction
@@ -4054,6 +4054,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.034779
@@ -4103,18 +4115,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: methanol production facility, construction
       | lca_location: RER'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Syngas_FT_C12
   technology:
     technology_description: gas-to-liquid plant construction
@@ -4132,6 +4132,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.001086
@@ -4181,18 +4193,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: gas-to-liquid plant | lca_location:
       GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Syngas_FT_C8
   technology:
     technology_description: gas-to-liquid plant construction
@@ -4210,6 +4210,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.001086
@@ -4259,18 +4271,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: gas-to-liquid plant | lca_location:
       GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Th_HeatStore_Th
   technology:
     technology_description: market for thermal storage system, solar tower power plant,
@@ -4289,6 +4289,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 6.695504
@@ -4338,18 +4350,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: thermal storage system, solar tower
       power plant, 20 MW | lca_location: GLO | notes: 440MWh thermal storage capacity'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Th_HotWaterTank_Th
   technology:
     technology_description: hot water tank production, 600l
@@ -4367,6 +4367,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 11.95727
@@ -4416,18 +4428,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: hot water tank, 600l | lca_location:
       CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Th_SeasonalStore_Th
   technology:
     technology_description: heat storage production, 2000l
@@ -4445,6 +4445,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 6.218017
@@ -4494,18 +4506,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kWh | ref_product: heat storage, 2000l | lca_location:
       CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: U235_Nuclear_El
   technology:
     technology_description: nuclear power plant construction, pressure water reactor,
@@ -4524,6 +4524,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 369.5315
@@ -4573,18 +4585,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: nuclear power plant, pressure water
       reactor, 1000MW | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Wind_Turbine_El
   technology:
     technology_description: wind turbine construction, 2MW, onshore
@@ -4602,6 +4602,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 579.1915
@@ -4651,18 +4663,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: wind turbine, 2MW, onshore | lca_location:
       GLO'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Wood_Boiler_ThBdg
   technology:
     technology_description: furnace production, wood chips, with silo, 50kW
@@ -4680,6 +4680,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 104.587
@@ -4729,18 +4741,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: furnace, wood chips, with silo, 50kW
       | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Wood_Boiler_ThInd
   technology:
     technology_description: furnace production, wood chips, with silo, 50kW
@@ -4758,6 +4758,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 104.587
@@ -4807,18 +4819,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: furnace, wood chips, with silo, 50kW
       | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Wood_CHP_ElTh
   technology:
     technology_description: heat and power co-generation unit construction, 1MWel
@@ -4837,6 +4837,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 300.1288
@@ -4886,18 +4898,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kW | ref_product: heat and power co-generation unit,
       organic Rankine cycle, 1MWe, 6.4 MWth | lca_location: CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Wood_Gasification_H2
   technology:
     technology_description: synthetic gas factory construction
@@ -4915,6 +4915,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.000222
@@ -4964,18 +4976,6 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: synthetic gas factory | lca_location:
       CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
 - technology_name: Wood_Gasification_Syngas
   technology:
     technology_description: synthetic gas factory construction
@@ -4993,6 +4993,18 @@
     system_boundary_description: null
     scope_assumption: null
   sources: []
+  balancing:
+    inputs: []
+    outputs: []
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    - embedded-carbon
+    - LCA
+    other_notes:
+    - Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.
   attributes:
   - attribute_name: embedded_carbon
     value: 0.000222
@@ -5042,15 +5054,3 @@
     time_index: 2050
     notes: 'lca_unit: kgCO2eq/kg | ref_product: synthetic gas factory | lca_location:
       CH'
-  balancing:
-    inputs: []
-    outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    - embedded-carbon
-    - LCA
-    other_notes:
-    - Generated from reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet.

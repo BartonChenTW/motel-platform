@@ -15,6 +15,48 @@ import yaml
 
 ## --- supportive functions
 
+ATTRIBUTE_NAMES = [
+    "technical_efficiency",
+    "trl",
+    "tech_maturity",
+    "reference_unit_size",
+    "theoretical_efficiency",
+    "operating_temperature_c",
+    "min_installation_size",
+    "lifetime_yr",
+    "capex_per_capacity",
+    "capex_one_time",
+    "opex_fix_pct_of_capex",
+    "opex_per_capacity_yr",
+    "opex_per_energy",
+    "discount_rate_pct",
+    "uncertainty_rating",
+    "storage_carrier",
+    "min_installation",
+    "charging_capacity_factor",
+    "discharging_capacity_factor",
+    "charging_efficiency",
+    "discharging_efficiency",
+    "min_soc",
+    "max_soc",
+    "standby_loss_per_hour",
+    "capex_per_stor_capacity",
+    "opex_one_time",
+    "opex_per_stor_capacity_yr",
+]
+
+STANDARD_SHEETS = ["ConvTech", "StorTech"]
+EMBEDDEDCARBON_SCENARIOS = {
+    "ssp2_ndc": ["ssp2_ndc_2025", "ssp2_ndc_2030", "ssp2_ndc_2040", "ssp2_ndc_2050"],
+    "ssp2_pkbudg1000": [
+        "ssp2_pkbudg1000_2025",
+        "ssp2_pkbudg1000_2030",
+        "ssp2_pkbudg1000_2040",
+        "ssp2_pkbudg1000_2050",
+    ],
+}
+EMBEDDEDCARBON_YEARS = [2025, 2030, 2040, 2050]
+
 def is_nan(value):
     """Checks if a value is None or NaN."""
     return value is None or (
@@ -51,6 +93,88 @@ def normalize_unit(unit_text):
         return None
     return unit
 
+
+def find_project_root(start: Path | None = None) -> Path:
+    """Find the repository root from any path inside motel-platform."""
+    start = (start or Path.cwd()).resolve()
+    for candidate in [start, *start.parents]:
+        if (candidate / "motel-db").is_dir() and (candidate / "schema_simple").is_dir():
+            return candidate
+    raise FileNotFoundError(
+        "Could not locate the repository root. Start the notebook from inside motel-platform."
+    )
+
+
+def get_refuel_paths(project_root: Path | None = None) -> dict[str, Path]:
+    """Return the key notebook, data, schema, and output paths for this pipeline."""
+    root = (project_root or find_project_root()).resolve()
+    notebook_dir = root / "1_ingest" / "ingestion_space" / "refuel"
+    return {
+        "project_root": root,
+        "notebook_dir": notebook_dir,
+        "workbook_path": notebook_dir / "raw_data" / "reFuel_TechDatabase_Clean_2026-06-03.xlsx",
+        "schema_path": root / "schema_simple" / "unmapped_entity.yaml",
+        "staging_path": root / "motel-db" / "unmapped_entity" / "unmapped_entities_refuel.yaml",
+        "convtech_output": notebook_dir / "unmapped_entities_refuel_convtech.yaml",
+        "stortech_output": notebook_dir / "unmapped_entities_refuel_stortech.yaml",
+        "embeddedcarbon_output": notebook_dir / "unmapped_entities_refuel_embeddedcarbon.yaml",
+    }
+
+
+def first_present(mapping, *keys):
+    """Return the first non-empty value from a mapping for the provided keys."""
+    for key in keys:
+        if key not in mapping:
+            continue
+        value = clean(mapping.get(key))
+        if value is None:
+            continue
+        text = str(value).strip()
+        if not text or text.lower() == "nan":
+            continue
+        return text
+    return None
+
+
+def normalize_source_type(raw_type):
+    """Map source-medium labels to the source schema enum."""
+    value = first_present({"value": raw_type}, "value")
+    if value is None:
+        return None
+
+    token = value.strip().lower()
+    lookup = {
+        "article": "article",
+        "journal article": "article",
+        "paper": "article",
+        "report": "report",
+        "database": "database",
+        "web": "website",
+        "website": "website",
+        "url": "website",
+        "book": "book",
+    }
+    return lookup.get(token, "other")
+
+
+def build_unmapped_source(ref_row, linked_attrs):
+    """Convert one reference-sheet row into an unmapped source record."""
+    source = {
+        "source_name": first_present(ref_row, "source_id", "reference_id", "id"),
+        "source_description": first_present(ref_row, "description", "title", "source_description"),
+        "source_type": normalize_source_type(
+            first_present(ref_row, "reference_type", "source_type", "type")
+        ),
+        "link": first_present(ref_row, "doi_or_url", "link", "url", "doi"),
+        "access_date": first_present(ref_row, "access_date"),
+        "confidence_level": first_present(ref_row, "confidence_level"),
+        "assessment_method": first_present(ref_row, "assessment_method"),
+        "assessment_date": first_present(ref_row, "assessment_date"),
+        "assessment_notes": first_present(ref_row, "comments", "assessment_notes", "note"),
+        "linked_attribute": sorted(linked_attrs),
+    }
+    return {key: value for key, value in source.items() if value is not None}
+
 def prepare_df(df_raw):
     """Normalize ConvTech table where row 1 contains machine-friendly headers."""
     df = df_raw.copy()
@@ -67,6 +191,75 @@ def prepare_df(df_raw):
         df = df[df["unit_operation"].notna()]
 
     return df.reset_index(drop=True)
+
+
+def apply_manual_fixes(workbook: dict[str, pd.DataFrame]) -> None:
+    """Apply source-specific cleanup that should happen before transformation."""
+    convtech = workbook["ConvTech"]
+
+    for field_name in ["min_installation_size", "operating_temperature_c"]:
+        column_index = convtech.iloc[1].tolist().index(field_name)
+        column_name = convtech.columns[column_index]
+        convtech[column_name] = convtech[column_name].replace(0, None)
+
+
+def limit_sheet_rows(
+    df: pd.DataFrame,
+    sheet_name: str,
+    sample_limit: int | None = None,
+) -> pd.DataFrame:
+    """Optionally trim a sheet to a small sample for notebook testing."""
+    if sample_limit is None:
+        print(f"{sheet_name}: using all {len(df)} rows")
+        return df
+
+    sample_limit = int(sample_limit)
+    if sample_limit <= 0:
+        raise ValueError("sample_limit must be None or a positive integer")
+
+    df_limited = df.head(sample_limit).copy()
+    print(f"{sheet_name}: using {len(df_limited)} of {len(df)} rows for testing")
+    return df_limited
+
+
+def load_workbook(workbook_path: Path | str) -> dict[str, pd.DataFrame]:
+    """Load the reFuel workbook and apply source-specific cleanup."""
+    workbook = pd.read_excel(workbook_path, sheet_name=None)
+    apply_manual_fixes(workbook)
+    return workbook
+
+
+def load_schema(schema_path: Path | str) -> dict:
+    """Load the simplified unmapped-entity schema used for notebook context."""
+    with open(schema_path, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+
+def load_reference_data(workbook: dict[str, pd.DataFrame]) -> pd.DataFrame:
+    """Extract and normalize the Reference sheet."""
+    df_ref = workbook["Reference"].copy()
+    df_ref.columns = df_ref.iloc[0]
+    return df_ref.iloc[1:].reset_index(drop=True)
+
+
+def load_attribute_data(
+    workbook: dict[str, pd.DataFrame],
+    attribute_names: list[str] | None = None,
+) -> pd.DataFrame:
+    """Extract the attribute metadata used during unmapped-entity conversion."""
+    attribute_names = attribute_names or ATTRIBUTE_NAMES
+    df_attr = workbook["Metadata"].copy()
+    df_attr = df_attr[df_attr["Variable Name"].isin(attribute_names)].reset_index(drop=True)
+    df_attr = df_attr.set_index("Variable Name")
+    return df_attr[["Column Header", "Unit / Format", "Allowed Values", "Description", "Note"]].copy()
+
+
+def build_ingestion_context(workbook: dict[str, pd.DataFrame]) -> dict[str, pd.DataFrame]:
+    """Bundle the workbook-derived context needed by the converters."""
+    return {
+        "df_ref": load_reference_data(workbook),
+        "df_attr": load_attribute_data(workbook),
+    }
 
 
 
@@ -116,9 +309,12 @@ def parse_source_text(source_text: str, df_ref: pd.DataFrame) -> list[dict]:
     Returns a list of source dicts following the unmapped_record schema:
         [
             {
-                "source_description": "source_id_A",
-                "source_type": "other",
-                "link": "",
+                "source_name": "source_id_A",
+                "source_description": "Full reference title",
+                "source_type": "article",
+                "link": "https://doi.org/...",
+                "access_date": "2026-06-03",
+                "assessment_notes": "page or curation comments",
                 "linked_attribute": ["attr1", "attr2"]
             },
             ...
@@ -135,7 +331,6 @@ def parse_source_text(source_text: str, df_ref: pd.DataFrame) -> list[dict]:
     # Build the sources array
     sources = []
     for source_id, linked_attrs in source_to_attrs.items():
-        # src_name = map_src_id.get(source_id, '')
         src_name = source_id  # Use source_id directly if no mapping is provided
 
         ## get source data from `ds_src`
@@ -146,13 +341,7 @@ def parse_source_text(source_text: str, df_ref: pd.DataFrame) -> list[dict]:
             print(f'Multiple entries found for source_id "{source_id}" in source dataset; using the first match.')
         else:
             di_src = df.iloc[0].to_dict()
-
-            # new schema does not include source_type and link
-            sources.append({
-                "source_name": di_src['source_id'],
-                "source_description": di_src['description'],
-                "linked_attribute": sorted(linked_attrs),
-            })
+            sources.append(build_unmapped_source(di_src, linked_attrs))
 
     return sources
 
@@ -218,7 +407,9 @@ def add_attributes_to_record(ue: dict, row: pd.Series, df_attr: pd.DataFrame) ->
         notes = get_attr_note(attr_row)
         unit_spec = str(attr_row.get('Unit / Format', ''))
         if currency and 'Currency' in unit_spec:
-            notes += f" | currency: {currency}"
+            notes += (
+                f" | source currency: {currency}"
+            )
 
         attr = {
             'attribute_name': attr,
@@ -336,6 +527,180 @@ def add_balancing_to_record(ue: dict, row: pd.Series) -> dict:
     )
 
     return ue
+
+
+def refuel2unmapped(row: pd.Series, df_ref: pd.DataFrame, df_attr: pd.DataFrame) -> dict:
+    """Convert one ConvTech or StorTech row into an unmapped entity."""
+    record = {
+        "technology_name": row.get("tech_id", ""),
+        "technology": {
+            "technology_description": clean(row.get("description")),
+            "technology_type": clean(row.get("tech_type")),
+            "technology_category": clean(row.get("technology_class")),
+            "technology_assumption": None,
+            "process_name": clean(row.get("unit_operation")),
+            "process_type": None,
+            "process_category": clean(row.get("tech_category")),
+            "process_assumption": None,
+        },
+        "scope": {
+            "geographic_scope_description": clean(row.get("cost_base")),
+            "temporal_scope_description": (
+                str(row.get("tech_year"))
+                if not is_nan(row.get("tech_year"))
+                else None
+            ),
+            "capacity_scope_description": clean(row.get("min_installation_size")),
+            "system_boundary_description": clean(row.get("tech_boundary")),
+            "scope_assumption": clean(row.get("tech_maturity")),
+        },
+        "metadata": {
+            "related_project": "reFuel.ch",
+            "tags": ["Switzerland", "power-to-X"],
+            "other_notes": [
+                "This unmapped entity was generated from the reFuel TechDatabase "
+                "(2026-06-03) using the MOTEL ingestion pipeline."
+            ],
+        },
+    }
+
+    record = add_sources_to_record(record, row.get("list_of_source_id"), df_ref)
+    record = add_attributes_to_record(record, row, df_attr)
+    record = add_balancing_to_record(record, row)
+    return record
+
+
+def embeddedcarbon2unmapped(row: pd.Series) -> dict:
+    """Convert one EmbeddedCarbon row into an unmapped entity."""
+    record = {
+        "technology_name": row.get("tech_id", ""),
+        "technology": {
+            "technology_description": clean(row.get("lca_activity")),
+            "technology_type": clean(row.get("tech_type")),
+            "technology_category": None,
+            "technology_assumption": None,
+            "process_name": clean(row.get("ref_product")),
+            "process_type": None,
+            "process_category": None,
+            "process_assumption": None,
+        },
+        "scope": {
+            "geographic_scope_description": clean(row.get("lca_location")),
+            "temporal_scope_description": None,
+            "capacity_scope_description": None,
+            "system_boundary_description": None,
+            "scope_assumption": None,
+        },
+        "sources": [],
+        "balancing": {"inputs": [], "outputs": []},
+        "metadata": {
+            "related_project": "reFuel.ch",
+            "tags": ["Switzerland", "power-to-X", "embedded-carbon", "LCA"],
+            "other_notes": [
+                "Generated from the reFuel TechDatabase (2026-06-03) EmbeddedCarbon sheet."
+            ],
+        },
+    }
+
+    lca_unit = clean(row.get("lca_unit"))
+    notes_base = (
+        f"lca_unit: {lca_unit}"
+        f" | ref_product: {clean(row.get('ref_product'))}"
+        f" | lca_location: {clean(row.get('lca_location'))}"
+    )
+    if not is_nan(row.get("notes")):
+        notes_base += f" | notes: {row.get('notes')}"
+
+    attributes = []
+    for scenario_key, columns in EMBEDDEDCARBON_SCENARIOS.items():
+        for year, column_name in zip(EMBEDDEDCARBON_YEARS, columns):
+            value = clean(row.get(column_name))
+            if value is None:
+                continue
+            attributes.append(
+                {
+                    "attribute_name": "embedded_carbon",
+                    "value": value,
+                    "uncertainty_notes": f"climate scenario: {scenario_key}",
+                    "time_index": year,
+                    "notes": notes_base,
+                }
+            )
+
+    record["attributes"] = attributes
+    return record
+
+
+def process_standard_sheet(
+    workbook: dict[str, pd.DataFrame],
+    sheet_name: str,
+    df_ref: pd.DataFrame,
+    df_attr: pd.DataFrame,
+    sample_limit: int | None = None,
+) -> list[dict]:
+    """Convert one standard technology sheet into unmapped entities."""
+    df_sheet = prepare_df(workbook[sheet_name])
+    df_sheet = limit_sheet_rows(df_sheet, sheet_name, sample_limit=sample_limit)
+    return [refuel2unmapped(df_sheet.loc[index], df_ref, df_attr) for index in df_sheet.index]
+
+
+def process_embeddedcarbon_sheet(
+    workbook: dict[str, pd.DataFrame],
+    sheet_name: str = "EmbeddedCarbon",
+    sample_limit: int | None = None,
+) -> list[dict]:
+    """Convert the EmbeddedCarbon sheet into unmapped entities."""
+    df_sheet = prepare_df(workbook[sheet_name])
+    df_sheet = limit_sheet_rows(df_sheet, sheet_name, sample_limit=sample_limit)
+    return [embeddedcarbon2unmapped(df_sheet.loc[index]) for index in df_sheet.index]
+
+
+def preview_entities(sheet_name: str, entities: list[dict], preview_rows: int = 3) -> None:
+    """Print a compact preview of the first few converted entities."""
+    print(f"{sheet_name}: {len(entities)} entities")
+    for entity in entities[:preview_rows]:
+        print(f"- {entity.get('technology_name')}")
+
+
+def write_yaml(records: list[dict], output_path: Path | str) -> None:
+    """Write records to YAML with stable formatting for inspection."""
+    with open(output_path, "w", encoding="utf-8") as f:
+        yaml.safe_dump(
+            records,
+            f,
+            allow_unicode=True,
+            sort_keys=False,
+            default_flow_style=False,
+        )
+
+
+def export_sheet_entities(sheet_entities: dict[str, list[dict]], output_paths: dict[str, Path | str]) -> None:
+    """Write one YAML file per sheet."""
+    for sheet_name, records in sheet_entities.items():
+        write_yaml(records, output_paths[sheet_name])
+
+
+def run_refuel_pipeline(
+    workbook: dict[str, pd.DataFrame],
+    df_ref: pd.DataFrame,
+    df_attr: pd.DataFrame,
+    sample_limit: int | None = None,
+) -> dict[str, list[dict]]:
+    """Run all three sheet conversions and return entities grouped by sheet."""
+    sheet_entities = {}
+    for sheet_name in STANDARD_SHEETS:
+        sheet_entities[sheet_name] = process_standard_sheet(
+            workbook,
+            sheet_name,
+            df_ref,
+            df_attr,
+            sample_limit=sample_limit,
+        )
+    sheet_entities["EmbeddedCarbon"] = process_embeddedcarbon_sheet(
+        workbook,
+        sample_limit=sample_limit,
+    )
+    return sheet_entities
 
 
 def publish_unmapped_entities(entity_groups, destination):

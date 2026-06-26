@@ -14,13 +14,25 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: web_BatteryCH_2023
     source_description: article about market price of home batteries in CH, in 2023
+    source_type: other
+    link: https://alpvolt.com/en/news/solar-batteries-in-switzerland
     linked_attribute:
     - capex_per_stor_capacity
   - source_name: web_Battery_OM_2025
     source_description: FOM costs are estimated at 2.5% of the capital costs
+    source_type: other
+    link: https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage
     linked_attribute:
     - opex_per_stor_capacity_yr
   attributes:
@@ -108,7 +120,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 1000
     uncertainty_notes: null
@@ -116,32 +128,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 25
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: ElBdg_Battery_ElBdg
   technology:
     technology_description: Electric battery storage at home, 2030
@@ -158,6 +162,14 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: assumption_Empa_battery_capex_2025
     source_description: assumption based on various info
@@ -165,6 +177,8 @@
     - capex_per_stor_capacity
   - source_name: web_Battery_OM_2025
     source_description: FOM costs are estimated at 2.5% of the capital costs
+    source_type: other
+    link: https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage
     linked_attribute:
     - opex_per_stor_capacity_yr
   attributes:
@@ -252,7 +266,7 @@
     time_index: 2030
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 650
     uncertainty_notes: null
@@ -260,32 +274,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2030
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 16.25
     uncertainty_notes: null
     time_index: 2030
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: ElBdg_Battery_ElBdg
   technology:
     technology_description: Electric battery storage at home, 2040
@@ -302,6 +308,14 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: assumption_Empa_battery_capex_2025
     source_description: assumption based on various info
@@ -309,6 +323,8 @@
     - capex_per_stor_capacity
   - source_name: web_Battery_OM_2025
     source_description: FOM costs are estimated at 2.5% of the capital costs
+    source_type: other
+    link: https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage
     linked_attribute:
     - opex_per_stor_capacity_yr
   attributes:
@@ -396,7 +412,7 @@
     time_index: 2040
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 550
     uncertainty_notes: null
@@ -404,32 +420,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2040
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 13.75
     uncertainty_notes: null
     time_index: 2040
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: ElBdg_Battery_ElBdg
   technology:
     technology_description: Electric battery storage at home, 2050
@@ -446,6 +454,14 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: assumption_Empa_battery_capex_2025
     source_description: assumption based on various info
@@ -453,6 +469,8 @@
     - capex_per_stor_capacity
   - source_name: web_Battery_OM_2025
     source_description: FOM costs are estimated at 2.5% of the capital costs
+    source_type: other
+    link: https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage
     linked_attribute:
     - opex_per_stor_capacity_yr
   attributes:
@@ -540,7 +558,7 @@
     time_index: 2050
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 500
     uncertainty_notes: null
@@ -548,32 +566,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2050
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 12.5
     uncertainty_notes: null
     time_index: 2050
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: El_Battery_El
   technology:
     technology_description: Electric battery storage at the grid, 2020
@@ -590,13 +600,26 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - capex_per_stor_capacity
   - source_name: web_Battery_OM_2025
     source_description: FOM costs are estimated at 2.5% of the capital costs
+    source_type: other
+    link: https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage
     linked_attribute:
     - opex_per_stor_capacity_yr
   attributes:
@@ -684,7 +707,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 800
     uncertainty_notes: null
@@ -692,32 +715,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 20
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: El_Battery_El
   technology:
     technology_description: Electric battery storage at the grid, 2030
@@ -734,13 +749,26 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - capex_per_stor_capacity
   - source_name: web_Battery_OM_2025
     source_description: FOM costs are estimated at 2.5% of the capital costs
+    source_type: other
+    link: https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage
     linked_attribute:
     - opex_per_stor_capacity_yr
   attributes:
@@ -828,7 +856,7 @@
     time_index: 2030
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 460
     uncertainty_notes: null
@@ -836,32 +864,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2030
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 11.5
     uncertainty_notes: null
     time_index: 2030
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: El_Battery_El
   technology:
     technology_description: Electric battery storage at the grid, 2040
@@ -878,13 +898,26 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - capex_per_stor_capacity
   - source_name: web_Battery_OM_2025
     source_description: FOM costs are estimated at 2.5% of the capital costs
+    source_type: other
+    link: https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage
     linked_attribute:
     - opex_per_stor_capacity_yr
   attributes:
@@ -972,7 +1005,7 @@
     time_index: 2040
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 400
     uncertainty_notes: null
@@ -980,32 +1013,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2040
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 10
     uncertainty_notes: null
     time_index: 2040
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: El_Battery_El
   technology:
     technology_description: Electric battery storage at the grid, 2050
@@ -1022,13 +1047,26 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - capex_per_stor_capacity
   - source_name: web_Battery_OM_2025
     source_description: FOM costs are estimated at 2.5% of the capital costs
+    source_type: other
+    link: https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage
     linked_attribute:
     - opex_per_stor_capacity_yr
   attributes:
@@ -1116,7 +1154,7 @@
     time_index: 2050
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 350
     uncertainty_notes: null
@@ -1124,32 +1162,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2050
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 8.75
     uncertainty_notes: null
     time_index: 2050
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: Hydro_PumpedReservoir_Hydro
   technology:
     technology_description: Pumped hydro reservoir, without pump and generator
@@ -1166,9 +1196,20 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - capex_per_stor_capacity
     - opex_per_stor_capacity_yr
@@ -1257,7 +1298,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 0.3
     uncertainty_notes: null
@@ -1265,32 +1306,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.003
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: Hydro_Reservoir_Hydro
   technology:
     technology_description: Pumped hydro reservoir, without pump and generator
@@ -1307,9 +1340,20 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - capex_per_stor_capacity
     - opex_per_stor_capacity_yr
@@ -1398,7 +1442,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 0.3
     uncertainty_notes: null
@@ -1406,32 +1450,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.003
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: Th_HeatStore_Th
   technology:
     technology_description: null
@@ -1448,6 +1484,14 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   attributes:
   - attribute_name: trl
     value: 9
@@ -1533,7 +1577,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 3
     uncertainty_notes: null
@@ -1541,32 +1585,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.026
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: Th_HotWaterTank_Th
   technology:
     technology_description: Hot water storage tank at home
@@ -1583,9 +1619,20 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - ALL
   attributes:
@@ -1673,7 +1720,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 60
     uncertainty_notes: null
@@ -1681,32 +1728,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.6
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: Th_SeasonalStore_Th
   technology:
     technology_description: Thermal storage for district heating, seasonal storage
@@ -1723,9 +1762,20 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - ALL
   attributes:
@@ -1813,7 +1863,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 3
     uncertainty_notes: null
@@ -1821,32 +1871,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.026
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: H2_Tank_H2
   technology:
     technology_description: null
@@ -1863,9 +1905,20 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - ALL
   attributes:
@@ -1953,7 +2006,7 @@
     time_index: 2030
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 7
     uncertainty_notes: null
@@ -1961,32 +2014,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2030
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.13
     uncertainty_notes: null
     time_index: 2030
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: CH4_GridStorage_CH4
   technology:
     technology_description: Storaging methane via compressing in the pipelines
@@ -2003,22 +2048,38 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - ALL
   - source_name: report_ASSET_2018
     source_description: 'ASSET: Technology pathways in decarbonisation scenarios (July
       2018)'
+    source_type: other
+    link: https://build-up.ec.europa.eu/sites/default/files/content/2018_06_27_technology_pathways_-_finalreportmain2.pdf
     linked_attribute:
     - ALL
   - source_name: report_gas_compression_2014
     source_description: Energieaufwand für Gaskomprimierung (November 2014)
+    source_type: other
+    link: https://www.ost.ch/fileadmin/dateiliste/3_forschung_dienstleistung/technik/3.7.1_erneuerbare_energien_und_umwelttechnik/iet/power-to-x/06_energie_fuer_gaskomprimierung.pdf
     linked_attribute:
     - ALL
   - source_name: report_gas_storage_2017
     source_description: Speicherkapazität von Erdgas in der Schweiz (24 Feb 2017)
+    assessment_notes: cannot find the link of the report
     linked_attribute:
     - ALL
   attributes:
@@ -2106,7 +2167,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 0.06
     uncertainty_notes: null
@@ -2114,32 +2175,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: CH4_Tank_CH4
   technology:
     technology_description: Tank storage for methane (compressed)
@@ -2156,22 +2209,38 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - ALL
   - source_name: report_ASSET_2018
     source_description: 'ASSET: Technology pathways in decarbonisation scenarios (July
       2018)'
+    source_type: other
+    link: https://build-up.ec.europa.eu/sites/default/files/content/2018_06_27_technology_pathways_-_finalreportmain2.pdf
     linked_attribute:
     - ALL
   - source_name: report_gas_compression_2014
     source_description: Energieaufwand für Gaskomprimierung (November 2014)
+    source_type: other
+    link: https://www.ost.ch/fileadmin/dateiliste/3_forschung_dienstleistung/technik/3.7.1_erneuerbare_energien_und_umwelttechnik/iet/power-to-x/06_energie_fuer_gaskomprimierung.pdf
     linked_attribute:
     - ALL
   - source_name: report_gas_storage_2017
     source_description: Speicherkapazität von Erdgas in der Schweiz (24 Feb 2017)
+    assessment_notes: cannot find the link of the report
     linked_attribute:
     - ALL
   attributes:
@@ -2259,7 +2328,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 6
     uncertainty_notes: null
@@ -2267,32 +2336,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.06
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: CH4_Underground_CH4
   technology:
     technology_description: Underground methane storage
@@ -2309,22 +2370,38 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_VSE_2022
     source_description: VSE Energiezukunft 2050, Studie 2022
+    source_type: other
+    link: https://www.strom.ch/de/energiezukunft-2050/download
+    access_date: '2023-09-06'
     linked_attribute:
     - ALL
   - source_name: report_ASSET_2018
     source_description: 'ASSET: Technology pathways in decarbonisation scenarios (July
       2018)'
+    source_type: other
+    link: https://build-up.ec.europa.eu/sites/default/files/content/2018_06_27_technology_pathways_-_finalreportmain2.pdf
     linked_attribute:
     - ALL
   - source_name: report_gas_compression_2014
     source_description: Energieaufwand für Gaskomprimierung (November 2014)
+    source_type: other
+    link: https://www.ost.ch/fileadmin/dateiliste/3_forschung_dienstleistung/technik/3.7.1_erneuerbare_energien_und_umwelttechnik/iet/power-to-x/06_energie_fuer_gaskomprimierung.pdf
     linked_attribute:
     - ALL
   - source_name: report_gas_storage_2017
     source_description: Speicherkapazität von Erdgas in der Schweiz (24 Feb 2017)
+    assessment_notes: cannot find the link of the report
     linked_attribute:
     - ALL
   attributes:
@@ -2412,7 +2489,7 @@
     time_index: 2030
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 0.039
     uncertainty_notes: null
@@ -2420,32 +2497,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 30000000
     uncertainty_notes: null
     time_index: 2030
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.0008
     uncertainty_notes: null
     time_index: 2030
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: CO2_Tank_CO2
   technology:
     technology_description: null
@@ -2462,6 +2531,14 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   attributes:
   - attribute_name: trl
     value: 9
@@ -2547,7 +2624,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 6
     uncertainty_notes: null
@@ -2555,32 +2632,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.06
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: CO_Tank_CO
   technology:
     technology_description: null
@@ -2597,6 +2666,14 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   attributes:
   - attribute_name: trl
     value: 9
@@ -2682,7 +2759,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 6
     uncertainty_notes: null
@@ -2690,32 +2767,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.06
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: C12_Tank_C12
   technology:
     technology_description: null
@@ -2732,6 +2801,14 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   attributes:
   - attribute_name: trl
     value: 9
@@ -2817,7 +2894,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 6
     uncertainty_notes: null
@@ -2825,32 +2902,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.06
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: C8_Tank_C8
   technology:
     technology_description: null
@@ -2867,6 +2936,14 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   attributes:
   - attribute_name: trl
     value: 9
@@ -2952,7 +3029,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 6
     uncertainty_notes: null
@@ -2960,32 +3037,24 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   - attribute_name: opex_per_stor_capacity_yr
     value: 0.06
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh / yr], Allowed Values: ≥ 0, Description: Fixed annual operational expenditure
-      per unit of storage capacity., Note: nan | currency: EUR'
+      per unit of storage capacity., Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
 - technology_name: NH3_Tank_NH3
   technology:
     technology_description: Tank storage for ammonia
@@ -3002,10 +3071,20 @@
     capacity_scope_description: null
     system_boundary_description: Plant ready to operate
     scope_assumption: Mature
+  metadata:
+    related_project: reFuel.ch
+    tags:
+    - Switzerland
+    - power-to-X
+    other_notes:
+    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
+      using the MOTEL ingestion pipeline.
   sources:
   - source_name: report_power_to_ammonia_2018
     source_description: Power-to-ammonia in future North European 100 %  renewable
       power and heat system
+    source_type: other
+    link: https://doi.org/10.1016/j.ijhydene.2018.06.121
     linked_attribute:
     - capex_per_stor_capacity
   attributes:
@@ -3087,7 +3166,7 @@
     time_index: 2025
     notes: 'Column Header: CAPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time capital expenditure independent of installed
-      capacity., Note: Per-project lump sum | currency: EUR'
+      capacity., Note: Per-project lump sum | source currency: EUR'
   - attribute_name: capex_per_stor_capacity
     value: 0.174
     uncertainty_notes: null
@@ -3095,22 +3174,14 @@
     notes: 'Column Header: CAPEX per Storage Capacity (kWh), Unit / Format: [Currency
       / kWh], Allowed Values: ≥ 0, Description: Specific capital expenditure per unit
       of installed storage capacity., Note: Primary scaling parameter (StorTech) |
-      currency: EUR'
+      source currency: EUR'
   - attribute_name: opex_one_time
     value: 0
     uncertainty_notes: null
     time_index: 2025
     notes: 'Column Header: OPEX One-Time, Unit / Format: [Currency], Allowed Values:
       ≥ 0, Description: Fixed one-time operational expenditure independent of capacity.,
-      Note: nan | currency: EUR'
+      Note: nan | source currency: EUR'
   balancing:
     inputs: []
     outputs: []
-  metadata:
-    related_project: reFuel.ch
-    tags:
-    - Switzerland
-    - power-to-X
-    other_notes:
-    - This unmapped entity was generated from the reFuel TechDatabase (2026-06-03)
-      using the Motel ingestion pipeline.
