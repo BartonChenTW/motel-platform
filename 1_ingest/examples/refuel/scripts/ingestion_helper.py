@@ -108,16 +108,17 @@ def find_project_root(start: Path | None = None) -> Path:
 def get_refuel_paths(project_root: Path | None = None) -> dict[str, Path]:
     """Return the key notebook, data, schema, and output paths for this pipeline."""
     root = (project_root or find_project_root()).resolve()
-    notebook_dir = root / "1_ingest" / "ingestion_space" / "refuel"
+    example_dir = root / "1_ingest" / "examples" / "refuel"
     return {
         "project_root": root,
-        "notebook_dir": notebook_dir,
-        "workbook_path": notebook_dir / "raw_data" / "reFuel_TechDatabase_Clean_2026-06-03.xlsx",
+        "example_dir": example_dir,
+        "notebook_path": example_dir / "ingestion_pipeline.ipynb",
+        "workbook_path": example_dir / "input" / "reFuel_TechDatabase_Clean_2026-06-03.xlsx",
         "schema_path": root / "schema_simple" / "unmapped_entity.yaml",
         "staging_path": root / "motel-db" / "unmapped_entity" / "unmapped_entities_refuel.yaml",
-        "convtech_output": notebook_dir / "unmapped_entities_refuel_convtech.yaml",
-        "stortech_output": notebook_dir / "unmapped_entities_refuel_stortech.yaml",
-        "embeddedcarbon_output": notebook_dir / "unmapped_entities_refuel_embeddedcarbon.yaml",
+        "convtech_output": example_dir / "output" / "unmapped_entities_refuel_convtech.yaml",
+        "stortech_output": example_dir / "output" / "unmapped_entities_refuel_stortech.yaml",
+        "embeddedcarbon_output": example_dir / "output" / "unmapped_entities_refuel_embeddedcarbon.yaml",
     }
 
 
